@@ -11,16 +11,20 @@ namespace WorkingWithTxt
     {
         static void Main(string[] args)
         {
-            string header = "CRT";
+            string header = "CNF";
             string id = "123456";
-            string v_total = "000000000700";
+            string rede = "GETNET";
+            string nsu_ctf = "476154";
+            string finalizacao = "12345";
             string final = "0";
 
             StreamWriter sw = new StreamWriter("c:\\Tef_Dial\\req\\IntPos.001");
 
                 sw.WriteLine("000-000 = " + header);
                 sw.WriteLine("001-000 = " + id);
-                sw.WriteLine("003-000 = " + v_total);
+                sw.WriteLine("010-000 = " + rede);
+                sw.WriteLine("012-000 = " + nsu_ctf);
+                sw.WriteLine("027-000 = " + finalizacao);
                 sw.WriteLine("999-999 = " + final);
                 sw.Close();
         }
